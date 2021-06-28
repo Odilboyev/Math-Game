@@ -117,10 +117,11 @@ const check = (box, number, trueAnswer) => {
     } else {
         box.classList.add('error')
         // modal.classList.remove('d-none')
-        myTime -= 3
-        if(myTime==0) modal.classList.remove('d-none')
+        myTime -= 2
     }
-    if(myTime==0) modal.classList.remove('d-none')
+    if(myTime <=0) {
+        modal.classList.remove('d-none')
+    }
 }
 // </check-answer>
 
