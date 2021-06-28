@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 900;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../img/back.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center !important;
+}
+
+.box {
+  font-size: 40px;
+  border-radius: 40px;
+  padding: 30px;
+  -webkit-box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  color: #1d2092;
+  display: inline-block;
+  min-width: 100px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.box:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+h1 {
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+}
+
+.timeline {
+  width: 500px;
+  height: 16px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.35);
+}
+
+.timeline .time {
+  height: 100px;
+  border-radius: 10px;
+  background-color: #161f6c;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.level {
+  color: #fff;
+  font-size: 40px;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.success {
+  background-color: #5cc15a;
+}
+
+.error {
+  background-color: #ed2929;
+}
+
+.my-modal-body {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 15, 80, 0.897);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 40px;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+  -webkit-animation-name: zoomin;
+          animation-name: zoomin;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.my-modal-body #level {
+  font-size: 70px;
+  color: #54ff05;
+}
+
+.my-modal-body button {
+  color: #0d1db1 !important;
+  padding: 20px 30px;
+  background-color: #00c500;
+  font-size: 20px;
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: translateY(-100%) rotate(-100deg);
+            transform: translateY(-100%) rotate(-100deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    -webkit-transform: translateY(-100%) rotate(-100deg);
+            transform: translateY(-100%) rotate(-100deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+            transform: translateY(0) rotate(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */

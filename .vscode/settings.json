@@ -1,0 +1,6 @@
+{
+    "editor.defaultFormatter": "embertooling.prettier-for-handlebars-vscode",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
