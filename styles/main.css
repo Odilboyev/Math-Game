@@ -51,10 +51,10 @@ h1 {
 }
 
 .timeline {
-  width: 500px;
+  width: 60%;
   height: 16px;
   border-radius: 10px;
-  background-color: #c4c4c4;
+  background-color: #161f6c;
   margin: 0 auto;
   overflow: hidden;
   -webkit-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.35);
@@ -62,9 +62,9 @@ h1 {
 }
 
 .timeline .time {
-  height: 100px;
+  height: 100%;
   border-radius: 10px;
-  background-color: #161f6c;
+  background-color: #00ffdd;
   -webkit-transition: all .4s;
   transition: all .4s;
 }
@@ -117,16 +117,31 @@ h1 {
           animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.my-modal-body #level {
+.my-modal-body #level2 {
   font-size: 70px;
-  color: #54ff05;
+  display: block;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
 }
 
 .my-modal-body button {
+  margin-top: 20px;
   color: #0d1db1 !important;
   padding: 20px 30px;
-  background-color: #00c500;
+  background-color: #00c5bb;
   font-size: 20px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.my-modal-body button:hover {
+  -webkit-box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
+          box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
+}
+
+.my-modal-body button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 @-webkit-keyframes zoomin {

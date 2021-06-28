@@ -6,7 +6,7 @@ const levelSpan = document.getElementById('level');
 const levelSpan2 = document.getElementById('level2');
 let level = 1
 const modal = document.getElementById('myModal')
-let seconds = 10
+let myTime = 10
 const timer = document.getElementById('timer')
 const time = document.getElementById('time')
 var intervalId = null;
@@ -31,12 +31,22 @@ function shuffle(array) {
     return array;
 }
 
+
 // <interval>
-const interval = () => { 
-    seconds--
-    timer.innerHTML = seconds
-    time.style.width = `${seconds}0%`
-    if(seconds === 0){
+const interval = () => {
+    myTime--
+    timer.innerHTML = myTime
+    time.style.width = `${myTime}0%`
+    // <timeline-color>
+    if (myTime < 3) {
+        time.style.backgroundColor = `red`
+    } else if (myTime > 3 && myTime < 7) {
+        time.style.backgroundColor = `yellow`
+    } else if (myTime > 7 && myTime < 10 || myTime >= 10) {
+        time.style.backgroundColor = `#00ffdd`
+    }
+    // </timeline-color>
+    if (myTime === 0) {
         modal.classList.remove('d-none')
         clearInterval(intervalId);
     }
@@ -45,9 +55,15 @@ intervalId = setInterval(interval, 1000);
 // </interval>
 
 
+
+
+// <wrong-answers>
 const getRandomNumber = () => {
     return Math.floor(Math.random() * 50) + 1
 }
+// </wrong-answers>
+
+
 const setNumber = () => {
 
     // <question-and-True-answer>
@@ -90,10 +106,9 @@ setNumber()
 const check = (box, number, trueAnswer) => {
     box.classList.remove('success')
     box.classList.remove('error')
-    console.log(box)
     if (number == trueAnswer) {
         box.classList.add('success')
-        seconds += 3
+        myTime += 3
         setNumber()
         level++;
         levelSpan.innerText = level
@@ -101,10 +116,11 @@ const check = (box, number, trueAnswer) => {
 
     } else {
         box.classList.add('error')
-        modal.classList.remove('d-none')
-        clearInterval(intervalId);
-        intervalId = null;
+        // modal.classList.remove('d-none')
+        myTime -= 3
+        if(myTime==0) modal.classList.remove('d-none')
     }
+    if(myTime==0) modal.classList.remove('d-none')
 }
 // </check-answer>
 
@@ -112,7 +128,7 @@ const check = (box, number, trueAnswer) => {
 const reFresh = () => {
     // level = 1
     // modal.classList.add('d-none')
-    // seconds = 11
+    // myTime = 11
     // setNumber()
     // setInterval(interval, 1000);
     window.location.reload();
