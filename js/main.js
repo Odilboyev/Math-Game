@@ -120,6 +120,7 @@ const check = (box, number, trueAnswer) => {
         myTime -= 2
     }
     if(myTime <=0) {
+        clearInterval(intervalId);
         modal.classList.remove('d-none')
     }
 }

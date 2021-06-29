@@ -121,7 +121,7 @@ h1 {
   font-size: 70px;
   display: block;
   color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 82px #0fa;
 }
 
 .my-modal-body button {
@@ -163,6 +163,13 @@ h1 {
   100% {
     -webkit-transform: translateY(0) rotate(0);
             transform: translateY(0) rotate(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    padding: 10px;
+    min-width: 60px;
   }
 }
 /*# sourceMappingURL=main.css.map */
