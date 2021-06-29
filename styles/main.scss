@@ -29,6 +29,7 @@ body {
     min-width: 100px;
     user-select: none;
     transition: all 0.4s;
+    margin-top: 80px;
 
     &:hover {
         transform: scale(1.1);
@@ -149,7 +150,12 @@ h1 {
 
 @media (max-width: 768px){
     .box{
+        margin-top: 20px;
         padding: 10px;
         min-width: 60px;
+        font-size: 20px;
+    }
+    .boxes{
+        padding: 0 40px;
     }
 }

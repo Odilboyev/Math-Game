@@ -34,6 +34,7 @@ body {
           user-select: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  margin-top: 80px;
 }
 
 .box:hover {
@@ -168,8 +169,13 @@ h1 {
 
 @media (max-width: 768px) {
   .box {
+    margin-top: 20px;
     padding: 10px;
     min-width: 60px;
+    font-size: 20px;
+  }
+  .boxes {
+    padding: 0 40px;
   }
 }
 /*# sourceMappingURL=main.css.map */
